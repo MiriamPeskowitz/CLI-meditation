@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 
-require_relative '../lib.meditation'
+require_relative '../config/environment'
 
-meditation::CLI.new.call
+Meditation::CLI.new.call

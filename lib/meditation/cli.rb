@@ -1,0 +1,3 @@
+class Meditation::CLI
+
+end 

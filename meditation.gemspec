@@ -6,17 +6,17 @@ require "meditation/version"
 Gem::Specification.new do |spec|
   spec.name          = "meditation"
   spec.version       = Meditation::VERSION
-  spec.authors       = ["miriam"]
+  spec.authors       = ["Miriam Peskowitz"]
   spec.email         = ["miriam5000@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{Meditations to start your day.}
+  spec.description   = %q{}
+  spec.homepage      = "https://github.com/MiriamPeskowitz/CLI-meditation"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
   if spec.respond_to?(:metadata)
-    spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
+    spec.metadata["allowed_push_host"] = "'http://mygemserver.com'"
   else
     raise "RubyGems 2.0 or newer is required to protect against " \
       "public gem pushes."
@@ -31,4 +31,8 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.16.a"
   spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "pry"
+  spec.add_development_dependency "nokogiri"
+  spec.add_development_dependency "require_all"
+  
 end

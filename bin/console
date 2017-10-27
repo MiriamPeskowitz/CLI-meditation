@@ -3,6 +3,9 @@
 require "bundler/setup"
 require "meditation"
 
+require "irb"
+require "pry"
+
 # You can add fixtures and/or initialization code here to make experimenting
 # with your gem easier. You can also use a different console, if you like.
 
@@ -10,5 +13,15 @@ require "meditation"
 # require "pry"
 # Pry.start
 
-require "irb"
-IRB.start(__FILE__)
+def reload
+	load_all './lib'
+end 
+
+require_relative "../config/environment"
+
+
+IRB.start(__FILE__
+Pry.start
+
+
+puts "welcome to the sandbox"
