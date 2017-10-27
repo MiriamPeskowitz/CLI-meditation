@@ -1,5 +1,10 @@
 # Meditation
 
+TODO list 
+1. create the scraper
+2. push data to create meditation instances. 
+3. connect to cli display
+
 So you want a quick meditation, but it seems like every meditation site has a gazillion choices! It takes 20 minutes just to find the one you want. What do they say about too many choices making us unhappy? Here's the solution: ten to choose from. If you start obsessing, just choose #5 and be done with it. 
 
 Happy calm!
