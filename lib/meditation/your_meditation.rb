@@ -1,0 +1,1 @@
+class Meditation::Your_meditation
