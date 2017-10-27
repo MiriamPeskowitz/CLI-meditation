@@ -13,22 +13,24 @@ class Meditation::Your_meditation
 			med.css("a.audio-button").attribute("href").text   #talk-links:2d-child}
 			)
 		binding.pry
+		#add index 
 		@@all << self
 	end 
+
+	def initialize(title=nil, teacher=nil, date=nil, length=nil, stream=nil)
+		@title = title
+		@teacher = teacher
+		@date = date
+		@length = length
+		@stream = stream
+	end
+
+	def self.find(number)
+		Your_meditation.all.each_with_index{ |index| xxx }
+	end 
+
+	def self.all
+		@@all
+	end
+
 end
-
-
-
-
-# # 	def initialize(talk_name = nil, 
-# # 	 @talk_name = talk_name 
-# # 	 etc 
-# # 	end 
-
-# # 	def self.all
-# # 		@@all
-# # 	end 
-
-
-
-# # end

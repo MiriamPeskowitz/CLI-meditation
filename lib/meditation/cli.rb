@@ -8,24 +8,20 @@ class Meditation::CLI
 
  def menu
  	puts "@@@@@@@@@@\n"
- 	display_meditation
+ 	display_meditations
  	puts "Here are ten meditations. Which number would you like to see?"
  	choice = gets.strip.to_i
 
- 	display_chosen_meditation
- 	
-
+ 	display_chosen_meditation(choice)
  end 
 
  def display_meditations
  	puts "@@@@@@@@@@\n"
  	display = Meditation::Scraper.new.make_object
-
  end 
 
  def display_chosen_meditation(choice)
-
-
+ 	chosen_meditation = Meditation::Scraper.find
 
  end
 
@@ -37,6 +33,7 @@ class Meditation::CLI
  		menu
  	else
  		puts "Have a calm and grounded day."
+ 	end
  end 
  
 
