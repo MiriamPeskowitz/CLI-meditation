@@ -1,5 +1,15 @@
 # Meditation
 
+So you want a quick meditation, but it seems like every meditation site has a gazillion choices! It takes 20 minutes just to find the one you want. What do they say about too many choices making us unhappy? Here's the solution: ten to choose from. If you start obsessing, just choose #5 and be done with it. 
+
+Happy calm!
+
+**
+
+Welcome to my CLI Data Gem project. It began as a more ambitious gem that scraped four sites and brought you four different types of info and wisdom with which to begin your day. It went wide instead of deep. I put that on hold to create this new version, which scrapes the Audio Dharma site to bring you a choice of ten meditative talks to choose from.  
+
+
+
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/meditation`. To experiment with that code, run `bin/console` for an interactive prompt.
 
 TODO: Delete this and the text above, and describe your gem
