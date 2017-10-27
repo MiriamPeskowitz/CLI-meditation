@@ -23,10 +23,11 @@ class Meditation::Your_meditation
 		@date = date
 		@length = length
 		@stream = stream
+		@@all << self
 	end
 
 	def self.find(number)
-		Your_meditation.all.each_with_index{ |index| xxx }
+		self.all[number -1]
 	end 
 
 	def self.all

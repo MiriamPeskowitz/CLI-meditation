@@ -15,8 +15,8 @@ class Meditation::Scraper
  		self.get_page.css(".talklist").text
  	end 
 
- 	def self.make_object
- 		self.scrape_meditation.each do |med|
+ 	def self.make_meditation_list
+ 		self.scrape_meditation do |med|
 			Meditation::Your_Meditation.new_from_index(med)
  		end
  	 end 
