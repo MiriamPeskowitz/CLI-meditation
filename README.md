@@ -8,7 +8,7 @@ Happy calm!
 
 Welcome to my CLI Data Gem project. It began as a more ambitious gem that scraped four sites and brought you four different types of info and wisdom with which to begin your day. It went wide instead of deep. I put that on hold to create this new version, which scrapes the Audio Dharma site to bring you a choice of ten meditative talks to choose from.  
 
-
+github: https://github.com/MiriamPeskowitz/CLI-meditation
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/meditation`. To experiment with that code, run `bin/console` for an interactive prompt.
 
@@ -42,4 +42,4 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/meditation.
+Bug reports and pull requests are welcome on GitHub at https://github.com/MiriamPeskowitz/meditation.
