@@ -13,15 +13,11 @@ class Meditation::Scraper
 
  	def self.scrape_meditation
  		self.get_page.css(".talklist").text
- 		
- 		
  	end 
 
- 	def make_object
- 		scrape_meditation.each do |med|
- 			puts "#{title}, #{speaker}, #{date}, #{length}"
- 			binding.pry
- 		#Meditation::Your_Meditation.new_from_index(med)
+ 	def self.make_object
+ 		self.scrape_meditation.each do |med|
+			Meditation::Your_Meditation.new_from_index(med)
  		end
  	 end 
 
