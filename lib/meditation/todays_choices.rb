@@ -8,11 +8,12 @@ class Meditation::Todays_choices
 
 	def initialize
 		@todays_choices = []
+	end
 
 	def add_todays_choices(m)
 		@today_choices << m
 	end 
-
+end
 
 
  # 	def self.new_from_index(med)
@@ -43,4 +44,3 @@ class Meditation::Todays_choices
 	# 	@@all
 	# end
 
-end

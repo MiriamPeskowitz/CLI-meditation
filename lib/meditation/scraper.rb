@@ -1,13 +1,13 @@
-# require 'pry'
-# require 'nokogiri'
-# require 'open-uri'
+require 'pry'
+require 'nokogiri'
+require 'open-uri'
 
 class Meditation::Scraper
 	attr_accessor :meditations, :doc
  	
 
  	def initialize
- 		@todays_choices = Todays_choices.new
+ 		@todays_choices = Meditation::Todays_choices.new
  		@doc = Nokogiri::HTML(open("http://www.audiodharma.org/"))	
  	end # do I need anything specific, like the first 3 
 
@@ -24,7 +24,7 @@ class Meditation::Scraper
 
  	def scrape_specifics
  		@doc.search(".talklist")[0..5].each do |article_table|
- 			m = Your_choice.new
+ 			m = Meditation::Your_choice.new
  			binding.pry
 
  			m.title = article_table.search(".talk-title").text.strip
