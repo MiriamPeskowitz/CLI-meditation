@@ -19,12 +19,8 @@ class Meditation::Todays_choices
 	  	@meditations.dup.freeze
  	end 
 
-	def add_todays_choices(m)
+	def add_meditation(m)
 		@meditations << m
-	end 
-
-	def add_meditation(meditation)
-		@meditations << meditation
 	end 
 end
 

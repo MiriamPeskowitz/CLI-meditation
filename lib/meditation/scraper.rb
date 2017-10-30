@@ -23,18 +23,18 @@ class Meditation::Scraper
  	# end 
 
  	def scrape_meditations
- 		@doc.css(".talklist")[1..5].each do |meditation|
- 			m = Meditation::Your_choice.new
- 			#this -- 
-			m.title = meditation.css(".talk-title").text.strip
- 			m.teacher = meditation.css(".talk-teacher").text.strip
- 			m.length = meditation.css(".talk-length").text.strip
- 			m.stream = meditation.css("a:nth-child(2)").attr("href").text.strip
+ 		@doc.css(".talklist").each do |meditation|
+ 			@m = Meditation::Your_choice.new
+ 			
+			@m.title = meditation.css(".talk-title").text.strip
+ 			@m.teacher = meditation.css(".talk-teacher").text.strip
+ 			@m.length = meditation.css(".talk-length").text.strip
+ 			@m.stream = meditation.css("a:nth-child(2)").attr("href").text.strip
  		
  		#nth-child(2) or instead of a, .audio-button:nth-child(2)
  		
  		end
- 		@todays_choices.add_todays_choices(m)
+ 		@todays_choices.add_meditation(m)
   	end 
  
 end 
