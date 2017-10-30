@@ -1,9 +1,9 @@
-require 'pry'
-require 'nokogiri'
-require 'open-uri'
+
+require "nokogiri"
+
 
 class Meditation::Scraper
-	attr_accessor :todays_choices, :doc
+	attr_accessor :meditations, :doc
  	
 
  	def initialize
@@ -22,20 +22,25 @@ class Meditation::Scraper
  	# 	#avi uses .search, not .css what's the difference? 
  	# end 
 
+ 	def scrape_try
+ 		@doc.css
+ 	end 
+
  	def scrape_meditations
- 		@doc.css(".talklist")[1..5].each do |meditation|
+ 		@doc.search(".talklist")[1..5].each do |med|
  			#instantiate the meditation 
- 			@m = Meditation::Your_choice.new
+ 			meditation = Meditation::Each_meditation.new
  			#scrape the data 
-			@m.title = meditation.css(".talk-title").text.strip
- 			@m.teacher = meditation.css(".talk-teacher").text.strip
- 			@m.length = meditation.css(".talk-length").text.strip
- 			@m.stream = meditation.css("a:nth-child(2)").attr("href").text.strip
- 		
+			meditation.title = med.css(".talk-title").text.strip
+ 			meditation.teacher = med.css(".talk-teacher").text.strip
+ 			meditation.length = med.css(".talk-length").text.strip
+ 			meditation.stream = med.css("a:nth-child(2)").attr("href").text.strip
+ 			@todays_choices.add_meditation(meditation)
  		#nth-child(2) or instead of a, .audio-button:nth-child(2)
+ 		#this creates a round of content for the attr_accessors in each.meditation 
  		
  		end
- 		@todays_choices.add_meditation(@m)
+ 		
   	end 
  
 end 

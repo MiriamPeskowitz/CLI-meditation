@@ -3,24 +3,19 @@ require 'pry'
 
 
 class Meditation::Todays_choices
-	attr_accessor :title, :teacher, :length, :stream, :meditations
-	
+	attr_accessor :meditations
 	
 
-	def initialize(title=nil, teacher=nil, length=nil, stream=nil )# are these necessary? 
+	def initialize
 		@meditations = []
-		@title = title
-		@teacher = teacher
-		@length = length
-		@stream = stream
 	end
 
 	def meditations
 	   	@meditations
  	end
 
-	def add_meditation(m)
-		@meditations << m
+	def add_meditation(meditation)
+		@meditations << meditation
 	end 
 end
 
