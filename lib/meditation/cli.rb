@@ -20,8 +20,7 @@ class Meditation::CLI_controller
 			when "list"
 				list_meditations 
 				puts "which would you like?"
-				binding.pry
-
+				input = gets.strip
 
 			when "exit"
 				puts "Have a calm day"
@@ -35,15 +34,15 @@ class Meditation::CLI_controller
 		
 #this isn't working, why? 
 	def list_meditations 
-		@med.scrape_meditations.each_with_index do |m, index|
-			puts "#{index}. #{m.title}"
+		@todays_choices.meditations.each_with_index do |m, i|
+			puts "#{i}. #{m.title} -- #{m.teacher} -- #{m.length}"
 		end 
  	end 
 
- 	def pick_meditation
- 		puts "Pick a meditation."
- 		input = gets.strip.to_i
-	end 
+ # 	def pick_meditation
+ # 		puts "Pick a meditation."
+ # 		input = gets.strip.to_i
+	# end 
 
 end
 
