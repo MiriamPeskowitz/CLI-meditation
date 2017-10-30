@@ -28,10 +28,10 @@ class Meditation::Scraper
  		@doc.search(".talklist").each[1-5] do |article_table|
  			m = Your_choice.new
 
- 			m.title = 
- 			m.teacher = 
- 			m.length =
- 			m.url = 
+ 			m.title = article_table.search
+ 			m.teacher = article_table.search
+ 			m.length =article_table.search
+ 			m.url = article_table.search
  		
  			@todays_choices.add_todays_choices(m)
  		end 
