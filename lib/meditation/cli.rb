@@ -13,6 +13,7 @@ class Meditation::CLI_controller
 	 	input = ""
 
 	 	display_meditations
+
 	 	puts "Here are five meditations. Which number would you like to see?"
 	 	@input = gets.strip.to_i
 	 	pick
@@ -25,11 +26,13 @@ class Meditation::CLI_controller
 	 		choose_again 	 
 	 	end 
 	end 
-	
+
 	def display_meditations
-		@todays_choices
+		@todays_choices.meditations.each_with_index do |m, index|
+			puts "#{index}. #{m.title, m.teacher, m.length}"
+		end 
  	 	puts "@@@@@@@@@@\n"
- 	 end 
+ 	end 
 
  	def choose_again
 	 	puts "@@@@@@@@@@\n"

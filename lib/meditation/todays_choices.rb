@@ -3,10 +3,12 @@ require 'pry'
 
 
 class Meditation::Todays_choices
-	attr_accessor :title, :teacher, :length, :stream
+	attr_accessor :title, :teacher, :length, :stream,
+	attr_reader: :meditations
+	
 
 	def initialize(title=nil, teacher=nil, length=nil, stream=nil )# are these necessary? 
-		@todays_choices = []
+		@meditations = []
 		# @title = title
 		# @teacher = teacher
 		# @length = length
@@ -14,12 +16,15 @@ class Meditation::Todays_choices
 		
 	end
 
-	def add_todays_choices(m)
-		@today_choices << m
+	def meditations
+	  	@meditations
+
+	def self.add_todays_choices(m)
+		@meditations << m
 	end 
 end
 
-
+#@today_choices_array = @meditations 
  # 	def self.new_from_index(med)
 	# 	self.new(
 	# 		med.css("td.talk_title").text,

@@ -18,18 +18,20 @@ class Meditation::Scraper
  	end 
 
  	def scrape_overview
- 		@todays_choices = @doc.css(".talklist")[0..5].text.strip #see if it needs any gsub 
+ 		@todays_choices = @doc.css(".talklist").text.strip
+ 		 #THIS IS THE LIST 
  		#avi uses .search, not .css what's the difference? 
  	end 
 
  	def scrape_specifics
- 		@doc.css(".talklist").each do |meditations|
- 			m = Meditation::Todays_choices.new
+ 		css(".talklist").each do |meditations|
+ 			m = Meditation::Your_choice.new
  			#this -- 
 			m.title = meditations.css(".talk-title").text.strip
  			m.teacher = meditations.css(".talk-teacher").text.strip
  			m.length = meditations.css(".talk-length").text.strip
  			m.stream = meditations.css("a:nth-child(2)").attr("href").text.strip
+ 			binding.pry
  		#nth-child(2) or instead of a, .audio-button:nth-child(2)
  		
  		end
