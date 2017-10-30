@@ -25,14 +25,15 @@ class Meditation::Scraper
  	end 
 
  	def scrape_specifics
- 		@doc.search(".talklist").each[1-5] do |article_table|
+ 		@doc.search(".talklist").each[0..5] do |article_table|
  			m = Your_choice.new
+ 			binding.pry
 
- 			m.title = article_table.search
- 			m.teacher = article_table.search
- 			m.length =article_table.search
- 			m.url = article_table.search
- 		
+ 			m.title = article_table.search(".talk-title").text.strip
+ 			m.teacher = article_table.search(".talk-teacher").text.strip
+ 			m.length =article_table.search(".talk-length").text.strip
+ 			m.url = article_table.search(".talk-links a:nth-child(2)").attr("href").text.strip
+ 		#nth-child(2) or instead of a, .audio-button:nth-child(2)
  			@todays_choices.add_todays_choices(m)
  		end 
  	end 
