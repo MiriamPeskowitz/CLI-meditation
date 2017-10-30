@@ -3,7 +3,7 @@ require 'nokogiri'
 require 'open-uri'
 
 class Meditation::Scraper
-	attr_accessor :meditations, :doc
+	attr_accessor :todays_choices, :doc
  	
 
  	def initialize
@@ -23,9 +23,10 @@ class Meditation::Scraper
  	# end 
 
  	def scrape_meditations
- 		@doc.css(".talklist").each do |meditation|
+ 		@doc.css(".talklist")[1..5].each do |meditation|
+ 			#instantiate the meditation 
  			@m = Meditation::Your_choice.new
- 			
+ 			#scrape the data 
 			@m.title = meditation.css(".talk-title").text.strip
  			@m.teacher = meditation.css(".talk-teacher").text.strip
  			@m.length = meditation.css(".talk-length").text.strip
@@ -34,7 +35,7 @@ class Meditation::Scraper
  		#nth-child(2) or instead of a, .audio-button:nth-child(2)
  		
  		end
- 		@todays_choices.add_meditation(m)
+ 		@todays_choices.add_meditation(@m)
   	end 
  
 end 

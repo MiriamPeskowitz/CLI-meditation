@@ -3,8 +3,8 @@ require 'pry'
 
 
 class Meditation::Todays_choices
-	attr_accessor :title, :teacher, :length, :stream,
-	# attr_reader :meditations
+	attr_accessor :title, :teacher, :length, :stream, :meditations
+	
 	
 
 	def initialize(title=nil, teacher=nil, length=nil, stream=nil )# are these necessary? 
@@ -16,8 +16,8 @@ class Meditation::Todays_choices
 	end
 
 	def meditations
-	  	@meditations.dup.freeze
- 	end 
+	   	@meditations
+ 	end
 
 	def add_meditation(m)
 		@meditations << m

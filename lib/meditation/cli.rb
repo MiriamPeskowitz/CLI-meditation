@@ -3,37 +3,36 @@ class Meditation::CLI_controller
 	def initialize #initialize the CLI controller object -- wrap my brain around this. 
 	 	
 	 	puts "Welcome, and get ready to meditate."
+
 	 	med = Meditation::Scraper.new #scrapes the top five meditations 
-	 	@todays_choices = med.scrape
-	 	
+	 	@todays_choices = med.scrape_meditations
 	end 
 
 	def call
-	 	puts "@@@@@@@@@@\n"
+		display_meditations
 	 	input = ""
-
-	 	display_meditations
-
 	 	puts "Here are five meditations. Which number would you like to see?"
 	 	@input = gets.strip.to_i
 	 	pick
 	end
 
 	def pick
-	 	if @input.between?(1..5)
+	 	if @input.between?(1,5)
 	 		system("open #{@todays_choices[@input.to_i-1].stream}")
 	 	else
 	 		choose_again 	 
 	 	end 
 	end 
 
-	def display_meditations
-		@todays_choices.meditations.each_with_index do |m, index|
+	def display_meditations 
+		@todays_choices.each_with_index do |m, index|
 			puts "#{index}. #{m}"
-			 #{m.title}, #{m.teacher}, #{m.length}"
 		end 
  	end 
 
+# @todays_choices.meditations.each_with_index do |m, index|
+		# 	puts "#{index}. #{m}"
+			 #{m.title}, #{m.teacher}, #{m.length}"
  	def choose_again
 	 	
 	 	puts "Would you like to choose a meditation? Enter 1-5, or 'x' to exit."
