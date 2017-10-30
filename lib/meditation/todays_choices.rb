@@ -4,7 +4,7 @@ require 'pry'
 
 class Meditation::Todays_choices
 	attr_accessor :meditations
-	
+	@@all
 
 	def initialize
 		@meditations = []
@@ -15,7 +15,11 @@ class Meditation::Todays_choices
  	end
 
 	def self.add_meditation(meditation)
-		@meditations << meditation
+		self.all << meditation
+	end 
+
+	def self.all
+		@@all
 	end 
 end
 

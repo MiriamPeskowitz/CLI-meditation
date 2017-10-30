@@ -33,6 +33,7 @@ class Meditation::Scraper
  			meditation.length = med.css(".talk-length").text.strip
  			meditation.stream = med.css("a:nth-child(2)").attr("href").text.strip
  			@todays_choices.add_meditation(meditation)
+ 			binding.pry
  		#nth-child(2) or instead of a, .audio-button:nth-child(2)
  		#this creates a round of content for the attr_accessors in each.meditation 
  		

@@ -3,8 +3,7 @@ class Meditation::CLI_controller
 	def call #initialize the CLI controller object -- wrap my brain around this. 
 	 	
 	 	puts "Welcome to the meditation gem."
-	 	@med = Meditation::Scraper.new
-	 	@todays_choices = @med.scrape
+	 	@today = Meditation::Scraper.new
 	 	menu
 	end 
 
@@ -38,8 +37,8 @@ class Meditation::CLI_controller
 			# @med = Meditation::Scraper.new #scrapes the top five meditations 
 	 # 	@todays_choices = @med.scrape
 
-		Meditation::Todays_choices.meditations.each.with_index do |m, index|
-			puts "#{index}. #{m.title} -- #{m.teacher} -- #{m.length}"
+		@today.scrape_meditations.each_with_index do |m, i|binding.pry
+			puts "#{i}. #{m.title} -- #{m.teacher} -- #{m.length}"
 			binding.pry
 		end 
  	end 
