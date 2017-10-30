@@ -2,4 +2,4 @@
 
 require_relative '../config/environment'
 
-Meditation::CLI.new.call
+Meditation::CLI_controller.new.call
