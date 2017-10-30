@@ -22,9 +22,6 @@ class Meditation::Scraper
  	# 	#avi uses .search, not .css what's the difference? 
  	# end 
 
- 	def scrape_try
- 		@doc.css
- 	end 
 
  	def scrape_meditations
  		@doc.search(".talklist")[1..5].each do |med|

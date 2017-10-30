@@ -16,26 +16,28 @@ class Meditation::CLI_controller
 			puts "what would you like to do, list meditations or exit?"
 			input = gets.strip.downcase
 
-			case input 
+			case select 
 			when "list"
 				list_meditations 
 				puts "which would you like?"
-				input = gets.strip
+				selected_meditation = gets.strip
 
 			when "exit"
 				puts "Have a calm day"
 				break
 
 			else
-				system("open #{@todays_choices[@input.to_i-1].stream}")
+				system("open #{@todays_choices[selected_meditation.to_i-1].stream}")
 			end
 		end
 	end 
 		
 #this isn't working, why? 
 	def list_meditations 
-		@todays_choices.meditations.each_with_index do |m, i|
-			puts "#{i}. #{m.title} -- #{m.teacher} -- #{m.length}"
+
+		Todays_choices.meditations.all.each_with_index do |m, index|
+			puts "#{index}. #{m.title} -- #{m.teacher} -- #{m.length}"
+			binding.pry
 		end 
  	end 
 
