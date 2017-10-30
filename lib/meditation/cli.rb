@@ -29,14 +29,14 @@ class Meditation::CLI_controller
 
 	def display_meditations
 		@todays_choices.meditations.each_with_index do |m, index|
-			puts "#{index}. #{m.title, m.teacher, m.length}"
+			puts "#{index}. #{m}"
+			 #{m.title}, #{m.teacher}, #{m.length}"
 		end 
- 	 	puts "@@@@@@@@@@\n"
  	end 
 
  	def choose_again
-	 	puts "@@@@@@@@@@\n"
-	 	puts "Would you like to choose a meditation? Enter 1-5, or x to exit."
+	 	
+	 	puts "Would you like to choose a meditation? Enter 1-5, or 'x' to exit."
 	 	input = gets.strip.downcase
 
 	 	if input > 0 && input <6
@@ -50,20 +50,12 @@ end
 # 	 	display_chosen_meditation(input)
 
 	 
-# **	 end 
-
-	 
 
 # 	 def display_chosen_meditation(choice)
 # 	 	#chosen_meditation = Meditation::Scraper.find(choice)
-# 	 	puts "@@@@@@@@@@\n"
+# 	 	
 # 	 	puts "Title:  		#{meditation.title}"
 # 	 	puts "Teacher:      #{meditation.teacher}"
 # 	 	puts "Length:       #{meditation.length}"
 # 	 	puts "Stream: 		#{meditation.stream}"
 # 	 end
-
-	
- 
-
-# end 
