@@ -12,25 +12,24 @@ class Meditation::Scraper
  	end # do I need anything specific, like the first 3 
 
  	def scrape
- 		scrape_overview
- 		scrape_specifics
- 		@todays_choices
+ 		scrape.meditations
+ 		@todays_choices 
  	end 
 
- 	def scrape_overview
- 		@todays_choices = @doc.css(".talklist").text.strip
- 		 #THIS IS THE LIST 
- 		#avi uses .search, not .css what's the difference? 
- 	end 
+ 	# def scrape_overview
+ 	# 	@todays_choices = @doc.css(".talklist")[1-5].text.strip
+ 	# 	 #THIS IS THE LIST 
+ 	# 	#avi uses .search, not .css what's the difference? 
+ 	# end 
 
- 	def scrape_specifics
- 		css(".talklist").each do |meditations|
+ 	def scrape_meditations
+ 		@todays_choices.meditations = @doc.css(".talklist").each do |meditation|
  			m = Meditation::Your_choice.new
  			#this -- 
-			m.title = meditations.css(".talk-title").text.strip
- 			m.teacher = meditations.css(".talk-teacher").text.strip
- 			m.length = meditations.css(".talk-length").text.strip
- 			m.stream = meditations.css("a:nth-child(2)").attr("href").text.strip
+			m.title = meditation.css(".talk-title").text.strip
+ 			m.teacher = meditation.css(".talk-teacher").text.strip
+ 			m.length = meditation.css(".talk-length").text.strip
+ 			m.stream = meditation.css("a:nth-child(2)").attr("href").text.strip
  			binding.pry
  		#nth-child(2) or instead of a, .audio-button:nth-child(2)
  		

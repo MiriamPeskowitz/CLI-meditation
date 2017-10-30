@@ -4,7 +4,7 @@ require 'pry'
 
 class Meditation::Todays_choices
 	attr_accessor :title, :teacher, :length, :stream,
-	attr_reader :meditations
+	# attr_reader :meditations
 	
 
 	def initialize(title=nil, teacher=nil, length=nil, stream=nil )# are these necessary? 
