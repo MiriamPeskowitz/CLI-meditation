@@ -1,12 +1,10 @@
-require 'pry'
-require 'nokogiri'
-require 'open-uri'
+# require 'pry'
+# require 'nokogiri'
+# require 'open-uri'
 
 class Meditation::Scraper
 	attr_accessor :meditations, :doc
  	
- 	@@all = []
-
 
  	def initialize
  		@todays_choices = Todays_choices.new
@@ -25,7 +23,7 @@ class Meditation::Scraper
  	end 
 
  	def scrape_specifics
- 		@doc.search(".talklist").each[0..5] do |article_table|
+ 		@doc.search(".talklist")[0..5].each do |article_table|
  			m = Your_choice.new
  			binding.pry
 
@@ -34,10 +32,11 @@ class Meditation::Scraper
  			m.length =article_table.search(".talk-length").text.strip
  			m.url = article_table.search(".talk-links a:nth-child(2)").attr("href").text.strip
  		#nth-child(2) or instead of a, .audio-button:nth-child(2)
- 			@todays_choices.add_todays_choices(m)
- 		end 
- 	end 
- end 
+ 		end
+ 		@todays_choices.add_todays_choices(m)
+  	end 
+ 
+end 
 
 #  	def self.get_page
 #  		# Nokogiri::HTML(open("https://www.tarabrach.com/guided-meditations"))
