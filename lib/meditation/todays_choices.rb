@@ -5,7 +5,7 @@ require 'pry'
 class Meditation::Todays_choices
 	attr_accessor :title, :teacher, :length, :stream
 
-	def initialize(title=nil, teacher=nil, length=nil, stream=nil )
+	def initialize(title=nil, teacher=nil, length=nil, stream=nil )# are these necessary? 
 		@todays_choices = []
 		# @title = title
 		# @teacher = teacher
