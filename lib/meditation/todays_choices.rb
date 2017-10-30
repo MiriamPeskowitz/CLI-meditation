@@ -10,11 +10,11 @@ class Meditation::Todays_choices
 		@meditations = []
 	end
 
-	def meditations
+	def self.meditations
 	   	@meditations
  	end
 
-	def add_meditation(meditation)
+	def self.add_meditation(meditation)
 		@meditations << meditation
 	end 
 end

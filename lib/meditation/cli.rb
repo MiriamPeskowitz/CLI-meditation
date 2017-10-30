@@ -1,19 +1,19 @@
 class Meditation::CLI_controller
 
-	def initialize #initialize the CLI controller object -- wrap my brain around this. 
+	def call #initialize the CLI controller object -- wrap my brain around this. 
 	 	
-	 	puts "Welcome. Ready to meditate?"
-
-	 	@med = Meditation::Scraper.new #scrapes the top five meditations 
-	 	@todays_choices = @med.scrape
+	 	puts "Welcome to the meditation gem."
+	 	
+	 	menu
 	end 
 
 
-	def call
+	def menu
+
 		input = ""
 
 		while input != "exit"
-			puts "what would you like to do, list meditations or exit?"
+			puts "what would you like to do, list or exit?"
 			input = gets.strip.downcase
 
 			case select 
@@ -34,8 +34,10 @@ class Meditation::CLI_controller
 		
 #this isn't working, why? 
 	def list_meditations 
+			# @med = Meditation::Scraper.new #scrapes the top five meditations 
+	 # 	@todays_choices = @med.scrape
 
-		Todays_choices.meditations.all.each_with_index do |m, index|
+		Todays_choices.meditations.all.each.with_index do |m, index|
 			puts "#{index}. #{m.title} -- #{m.teacher} -- #{m.length}"
 			binding.pry
 		end 
