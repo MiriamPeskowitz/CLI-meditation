@@ -3,31 +3,32 @@ class Meditation::CLI_controller
 	def call #initialize the CLI controller object -- wrap my brain around this. 
 	 	
 	 	puts "Welcome to the meditation gem."
-	 	
+	 	@med = Meditation::Scraper.new
+	 	@todays_choices = @med.scrape
 	 	menu
 	end 
 
 
 	def menu
-
 		input = ""
 
 		while input != "exit"
 			puts "what would you like to do, list or exit?"
 			input = gets.strip.downcase
 
-			case select 
-			when "list"
+			
+			if input == "list"
 				list_meditations 
 				puts "which would you like?"
-				selected_meditation = gets.strip
+				
 
-			when "exit"
+			elsif input == "exit"
 				puts "Have a calm day"
 				break
 
 			else
 				system("open #{@todays_choices[selected_meditation.to_i-1].stream}")
+			
 			end
 		end
 	end 
@@ -37,16 +38,16 @@ class Meditation::CLI_controller
 			# @med = Meditation::Scraper.new #scrapes the top five meditations 
 	 # 	@todays_choices = @med.scrape
 
-		Todays_choices.meditations.all.each.with_index do |m, index|
+		Meditation::Todays_choices.meditations.each.with_index do |m, index|
 			puts "#{index}. #{m.title} -- #{m.teacher} -- #{m.length}"
 			binding.pry
 		end 
  	end 
 
- # 	def pick_meditation
- # 		puts "Pick a meditation."
- # 		input = gets.strip.to_i
-	# end 
+ 	def pick_meditation
+  		puts "Pick a meditation."
+ 		selected_meditation = gets.strip
+	 end 
 
 end
 
