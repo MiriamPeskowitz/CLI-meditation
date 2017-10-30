@@ -20,7 +20,7 @@ class Meditation::CLI_controller
 	end
 
 	def pick
-	 	if @input.between?(1-5)
+	 	if @input.between?(1..5)
 	 		system("open #{@todays_choices[@input.to_i-1].stream}")
 	 	else
 	 		choose_again 	 

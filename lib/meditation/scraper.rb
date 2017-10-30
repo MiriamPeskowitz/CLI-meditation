@@ -17,13 +17,13 @@ class Meditation::Scraper
  	end 
 
  	# def scrape_overview
- 	# 	@todays_choices = @doc.css(".talklist")[1-5].text.strip
+ 	# 	@todays_choices = @doc.css(".talklist")[1..5].text.strip
  	# 	 #THIS IS THE LIST 
  	# 	#avi uses .search, not .css what's the difference? 
  	# end 
 
  	def scrape_meditations
- 		@todays_choices.meditations = @doc.css(".talklist").each do |meditation|
+ 		@doc.css(".talklist")[1..5].each do |meditation|
  			m = Meditation::Your_choice.new
  			#this -- 
 			m.title = meditation.css(".talk-title").text.strip
