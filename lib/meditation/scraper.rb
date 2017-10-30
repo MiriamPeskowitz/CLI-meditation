@@ -23,11 +23,10 @@ class Meditation::Scraper
  	end 
 
  	def scrape_specifics
- 		@doc.search(".talklist")[0..5].each do |article_table|
+ 		@doc.css(".talklist")[0..5].each do |article_table|
  			m = Meditation::Your_choice.new
- 			binding.pry
-
- 			m.title = article_table.search(".talk-title").text.strip
+ 			
+			m.title = article_table.search(".talk-title").text.strip
  			m.teacher = article_table.search(".talk-teacher").text.strip
  			m.length =article_table.search(".talk-length").text.strip
  			m.url = article_table.search(".talk-links a:nth-child(2)").attr("href").text.strip

@@ -8,6 +8,10 @@ class Meditation::Todays_choices
 
 	def initialize
 		@todays_choices = []
+		@length = Meditation::Todays_choices.length
+		@stream = Meditation::Todays_choices.stream
+		@title = Meditation::Todays_choices.title
+		@teacher = Meditation::Todays_choices.teacher
 	end
 
 	def add_todays_choices(m)
