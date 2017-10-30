@@ -1,4 +1,4 @@
 class Meditation::Your_choice
-	attr_accessor :title, :url, :teacher, :length
+	attr_accessor :title, :stream, :teacher, :length
 
 end 

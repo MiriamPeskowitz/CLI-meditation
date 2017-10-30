@@ -12,7 +12,7 @@ class Meditation::Scraper
  	end # do I need anything specific, like the first 3 
 
  	def scrape
- 		scrape.meditations
+ 		scrape_meditations
  		@todays_choices 
  	end 
 
@@ -30,7 +30,7 @@ class Meditation::Scraper
  			m.teacher = meditation.css(".talk-teacher").text.strip
  			m.length = meditation.css(".talk-length").text.strip
  			m.stream = meditation.css("a:nth-child(2)").attr("href").text.strip
- 			binding.pry
+ 		
  		#nth-child(2) or instead of a, .audio-button:nth-child(2)
  		
  		end

@@ -9,10 +9,10 @@ class Meditation::Todays_choices
 
 	def initialize(title=nil, teacher=nil, length=nil, stream=nil )# are these necessary? 
 		@meditations = []
-		# @title = title
-		# @teacher = teacher
-		# @length = length
-		# @stream = stream
+		@title = title
+		@teacher = teacher
+		@length = length
+		@stream = stream
 	end
 
 	def meditations
