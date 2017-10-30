@@ -19,7 +19,7 @@ class Meditation::CLI_controller
 
 	def open
 	 	if input > 0 && input <6
-	 		system("open #{@todays_choices.title[input.to_i-1].url}")
+	 		system("open #{@todays_choices[input.to_i-1].stream}")
 	 	else
 	 		choose_again 	 
 	 	end 

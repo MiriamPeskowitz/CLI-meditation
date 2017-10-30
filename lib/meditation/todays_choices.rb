@@ -3,15 +3,15 @@ require 'pry'
 
 
 class Meditation::Todays_choices
-	attr_accessor :title, :teacher, :date, :length, :stream
-	@@all = []
+	attr_accessor :title, :teacher, :length, :stream
 
-	def initialize
+	def initialize(title=nil, teacher=nil, length=nil, stream=nil )
 		@todays_choices = []
-		@length = Meditation::Todays_choices.length
-		@stream = Meditation::Todays_choices.stream
-		@title = Meditation::Todays_choices.title
-		@teacher = Meditation::Todays_choices.teacher
+		# @title = title
+		# @teacher = teacher
+		# @length = length
+		# @stream = stream
+		
 	end
 
 	def add_todays_choices(m)

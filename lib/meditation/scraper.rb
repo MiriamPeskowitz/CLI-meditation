@@ -23,19 +23,27 @@ class Meditation::Scraper
  	end 
 
  	def scrape_specifics
- 		@doc.css(".talklist")[0..5].each do |article_table|
- 			m = Meditation::Your_choice.new
+ 		@doc.css(".talklist")[0..5].each do |meditations|
+ 			m = Meditation::Todays_choices.new
  			
-			m.title = article_table.search(".talk-title").text.strip
- 			m.teacher = article_table.search(".talk-teacher").text.strip
- 			m.length =article_table.search(".talk-length").text.strip
- 			m.url = article_table.search(".talk-links a:nth-child(2)").attr("href").text.strip
+			m.title = meditations.css(".talk-title").text.strip
+ 			m.teacher = meditations.css(".talk-teacher").text.strip
+ 			m.length = meditations.css(".talk-length").text.strip
+ 			m.stream = meditations.css("a .audio-button").attr("href")
  		#nth-child(2) or instead of a, .audio-button:nth-child(2)
+ 		binding.pry
  		end
  		@todays_choices.add_todays_choices(m)
   	end 
  
 end 
+
+# @todays_choices = []
+# 		@title = Meditation::Todays_choices.title
+# 		@teacher = Meditation::Todays_choices.teacher
+# 		@length = Meditation::Todays_choices.length
+# 		@stream = Meditation::Todays_choices.stream
+		
 
 #  	def self.get_page
 #  		# Nokogiri::HTML(open("https://www.tarabrach.com/guided-meditations"))
