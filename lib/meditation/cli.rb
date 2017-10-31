@@ -1,8 +1,10 @@
 class Meditation::CLI_controller
 
 	def call #initialize the CLI controller object -- wrap my brain around this. 
-	 	
-	 	puts "Welcome to the meditation gem."
+	 	#scrape first 
+	 	puts "****   Welcome to Miriam's meditation gem.  ****"
+	 	puts "************************************************"
+
 	 	@today = Meditation::Scraper.new.scrape
 	 	menu
 	end 
@@ -12,24 +14,26 @@ class Meditation::CLI_controller
 		list_or_exit_input = ""
 
 		while list_or_exit_input != "exit"
-			puts "what would you like to do, list or exit?"
+			puts "Enter 'list' to list five Audio Dharma meditations, or 'exit' to leave."
 			list_or_exit_input = gets.strip.downcase
 
-			
+			#logic for the input: 
 			if list_or_exit_input == "list"
+				"************************************************"
 				list_meditations 
-				puts "which would you like?"
+
+				puts "Enter the number of the meditative talk you'd like to hear. (It'll auto-open in your browser.)"
 				pick_meditation
 				
 
 			elsif list_or_exit_input == "exit"
-				puts "Have a calm day"
+				puts "Have a calm and grounded day."
+				puts "*****************************"
 				break
 
 			else
-				puts "Not sure what you want. Try again: list or exit?"
+				puts "Can you repeat that?"
 
-			
 			end
 		end
 	end 
@@ -38,12 +42,14 @@ class Meditation::CLI_controller
 	def list_meditations 	
 		@today.meditations.each_with_index do |m, i|
 			puts "#{i + 1}: #{m.title}"
-			puts " by #{m.teacher} (Length:#{m.length})"
-			
+			puts " by #{m.teacher} (Length: #{m.length})"
 		end 
- 	end 
+		puts "************************************************"
+
+	end 
 
  	def pick_meditation
+
  		selected_meditation = gets.strip
  		system("open http://www.audiodharma.org/#{@today.meditations[selected_meditation.to_i-1].stream}")
 
@@ -52,12 +58,3 @@ class Meditation::CLI_controller
 end
 
 	 
-
-# 	 def display_chosen_meditation(choice)
-# 	 	#chosen_meditation = Meditation::Scraper.find(choice)
-# 	 	
-# 	 	puts "Title:  		#{meditation.title}"
-# 	 	puts "Teacher:      #{meditation.teacher}"
-# 	 	puts "Length:       #{meditation.length}"
-# 	 	puts "Stream: 		#{meditation.stream}"
-# 	 end
