@@ -1,14 +1,22 @@
 # Meditation
 
 NOTES -- Tuesday morning, final cleanup, and how to publish. Then see if I can get my other one working. 
+1. Link to License? 
+2. Final cleanup
+3. publish
+4. make video demo
+5. submit links to github https://github.com/MiriamPeskowitz/CLI-meditation
+6.
 
-So you want a quick meditation, but it seems like every meditation site has a gazillion choices and it takes 20 minutes just to find the one you want. What do they say about too many choices making us unhappy? Here's the solution: ten to choose from. If you start obsessing, just choose #5 and be done with it. 
+## Description
+
+So you want a quick meditation, but every meditation site has a gazillion choices. It takes 20 minutes just to find the one you want, and then you have to go to work! They say too many choices make us unhappy. Here's the solution: five meditations to choose from. If you start obsessing, just choose #5 and be done with it. 
 
 Happy calm!
 
 **
 
-Welcome to my CLI Data Gem project. It began as a more ambitious gem that scraped four sites and brought you four different types of info and wisdom with which to begin your day. It went wide instead of deep. I put that on hold to create this new version, which scrapes the Audio Dharma site to bring you a choice of ten meditative talks to choose from.  
+Welcome to my CLI Data Gem project. It began as a more ambitious gem that scraped four sites and brought you four different types of info and wisdom with which to begin your day. It went wide instead of deep. I put that on hold to create this new version, which scrapes the Audio Dharma site to bring you a choice of five meditative talks.  
 
 github: https://github.com/MiriamPeskowitz/CLI-meditation
 

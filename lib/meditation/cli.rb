@@ -19,7 +19,7 @@ class Meditation::CLI_controller
 
 			#logic for the input: 
 			if list_or_exit_input == "list"
-				"************************************************"
+				puts "************************************************"
 				list_meditations 
 
 				puts "Enter the number of the meditative talk you'd like to hear. (It'll auto-open in your browser.)"
@@ -49,10 +49,8 @@ class Meditation::CLI_controller
 	end 
 
  	def pick_meditation
-
  		selected_meditation = gets.strip
  		system("open http://www.audiodharma.org/#{@today.meditations[selected_meditation.to_i-1].stream}")
-
 	end 
  
 end
