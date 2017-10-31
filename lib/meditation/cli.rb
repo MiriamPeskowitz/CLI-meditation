@@ -50,6 +50,7 @@ class Meditation::CLI_controller
 
  	def pick_meditation
  		selected_meditation = gets.strip
+ 		puts "http://www.audiodharma.org/#{@today.meditations[selected_meditation.to_i-1].stream}"
  		system("open http://www.audiodharma.org/#{@today.meditations[selected_meditation.to_i-1].stream}")
 	end 
  
