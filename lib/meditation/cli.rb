@@ -9,19 +9,19 @@ class Meditation::CLI_controller
 
 
 	def menu
-		input = ""
+		list_or_exit_input = ""
 
-		while input != "exit"
+		while list_or_exit_input != "exit"
 			puts "what would you like to do, list or exit?"
-			input = gets.strip.downcase
+			list_or_exit = gets.strip.downcase
 
 			
-			if input == "list"
+			if list_or_exit_input == "list"
 				list_meditations 
 				puts "which would you like?"
 				
 
-			elsif input == "exit"
+			elsif list_or_exit_input == "exit"
 				puts "Have a calm day"
 				break
 

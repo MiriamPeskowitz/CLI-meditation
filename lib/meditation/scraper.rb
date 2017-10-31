@@ -24,7 +24,7 @@ class Meditation::Scraper
 
 
  	def scrape_meditations
- 		@doc.search(".talklist")[1..5].each do |med|
+ 		@doc.search(".talklist")[1..5].collect do |med|
  			#instantiate the meditation 
  			meditation = Meditation::Each_meditation.new
  			#scrape the data 
@@ -44,6 +44,12 @@ class Meditation::Scraper
 end 
 
 #how do i get the choice? 
+# Make a hash? 
+# :title => 
+# :teacher =>
+# :exhibit =>
+# :length => 
+
 
 # @todays_choices = []
 # 		@title = Meditation::Todays_choices.title
