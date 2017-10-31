@@ -3,10 +3,11 @@
 NOTES -- Tuesday morning, final cleanup, and how to publish. Then see if I can get my other one working. 
 1. Link to License? 
 2. Final cleanup
+2.5 merge working branch with master. 
 3. publish
 4. make video demo
 5. submit links to github https://github.com/MiriamPeskowitz/CLI-meditation
-6.
+6. 
 
 ## Description
 
