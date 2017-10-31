@@ -1,11 +1,8 @@
 # Meditation
 
-TODO list 
-1. create the scraper
-2. push data to create meditation instances. 
-3. connect to cli display
 
-So you want a quick meditation, but it seems like every meditation site has a gazillion choices! It takes 20 minutes just to find the one you want. What do they say about too many choices making us unhappy? Here's the solution: ten to choose from. If you start obsessing, just choose #5 and be done with it. 
+
+So you want a quick meditation, but it seems like every meditation site has a gazillion choices and it takes 20 minutes just to find the one you want. What do they say about too many choices making us unhappy? Here's the solution: ten to choose from. If you start obsessing, just choose #5 and be done with it. 
 
 Happy calm!
 
@@ -15,9 +12,11 @@ Welcome to my CLI Data Gem project. It began as a more ambitious gem that scrape
 
 github: https://github.com/MiriamPeskowitz/CLI-meditation
 
+
+
+***
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/meditation`. To experiment with that code, run `bin/console` for an interactive prompt.
 
-TODO: Delete this and the text above, and describe your gem
 
 ## Installation
 

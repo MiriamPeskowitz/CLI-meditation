@@ -24,19 +24,23 @@ class Meditation::Scraper
 
 
  	def scrape_meditations
- 		@doc.search(".talklist")[1..5].collect do |med|
+ 		
+ 		@doc.search(".talklist tr")[1..5].collect do |med|
+
  			#instantiate the meditation 
+
  			meditation = Meditation::Each_meditation.new
  			#scrape the data 
-			meditation.title = med.css(".talk-title").text.strip
- 			meditation.teacher = med.css(".talk-teacher").text.strip
- 			meditation.length = med.css(".talk-length").text.strip
+			meditation.title = med.css(".talk_title").text.strip
+ 			meditation.teacher = med.css(".talkteacher").text.strip
+ 			meditation.length = med.css(".talk_length").text.strip
  			meditation.stream = med.css("a:nth-child(2)").attr("href").text.strip
+ 			
  			@todays_choices.add_meditation(meditation)
- 			binding.pry
+ 			
  		#nth-child(2) or instead of a, .audio-button:nth-child(2)
  		#this creates a round of content for the attr_accessors in each.meditation 
- 		
+ 		# attr("title =")
  		end
  		
   	end 

@@ -4,23 +4,21 @@ require 'pry'
 
 class Meditation::Todays_choices
 	attr_accessor :meditations
-	@@all
+	
 
 	def initialize
 		@meditations = []
 	end
 
-	def self.meditations
+	def meditations
 	   	@meditations
  	end
 
-	def self.add_meditation(meditation)
-		self.all << meditation
+	def add_meditation(meditation)
+		@meditations << meditation
 	end 
 
-	def self.all
-		@@all
-	end 
+	
 end
 
 # @today_choices_array = @meditations 
