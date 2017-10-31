@@ -14,7 +14,7 @@ class Meditation::CLI_controller
 		list_or_exit_input = ""
 
 		while list_or_exit_input != "exit"
-			puts "Enter 'list' to list five Audio Dharma meditations, or 'exit' to leave."
+			puts "Enter 'list' to see five Audio Dharma meditations, or 'exit' to leave."
 			list_or_exit_input = gets.strip.downcase
 
 			#logic for the input: 

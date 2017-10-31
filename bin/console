@@ -2,6 +2,7 @@
 
 require "bundler/setup"
 require "meditation"
+#DO i need lines 3-4 here? 
 
 require "irb"
 require "pry"
