@@ -5,14 +5,21 @@ require "meditation/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "meditation"
-  spec.version       = "0.1.3"
+  spec.version       = "0.1.4"
   spec.authors       = ["Miriam Peskowitz"]
   spec.email         = ["miriam5000@gmail.com"]
 
-  spec.summary       = %q{Meditations to start your day.}
-  
+  spec.summary       = %q{Meditations to start your day, from Audiodharma.org.}
+  spec.description   = %q{ CLI app that that scrapes five daily meditations so you can choose one.}
   spec.homepage      = "https://github.com/MiriamPeskowitz/CLI-meditation"
+  spec.license       = "MIT"
 
+if spec.respond_to?(:metadata)
+    spec.metadata["allowed_push_host"] = "https//:rubygems.org"
+  else
+    raise "RubyGems 2.0 or newer is required to protect against " \
+      "public gem pushes."
+  end
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
