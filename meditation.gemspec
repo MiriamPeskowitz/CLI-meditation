@@ -6,20 +6,21 @@ require "meditation/version"
 Gem::Specification.new do |spec|
   spec.name          = "meditation"
   spec.version       = "0.1.4"
-  spec.authors       = "Miriam Peskowitz"
+  spec.authors       = ["Miriam Peskowitz"]
   spec.email         = "miriam5000@gmail.com"
 
   spec.summary       = "Meditations to start your day, from Audiodharma.org."
   spec.description   = "CLI app that that scrapes five daily meditations so you can choose one."
   spec.homepage      = "https://github.com/MiriamPeskowitz/CLI-meditation"
-  spec.license       = "MIT"
+  spec.license       = ["MIT"] #choosealicense.com/.
 
-if spec.respond_to?(:metadata)
-    spec.metadata["allowed_push_host"] = "https://rubygems.org"
-  else
-    raise "RubyGems 2.0 or newer is required to protect against " \
-      "public gem pushes."
-  end
+# is this the problem? http://guides.rubygems.org/specification-reference/#add_runtime_dependency 
+#if spec.respond_to?(:metadata)
+#     spec.metadata["allowed_push_host"] = {"https://rubygems.org"}
+#   else
+#     raise "RubyGems 2.0 or newer is required to protect against " \
+#       "public gem pushes."
+#   end
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
