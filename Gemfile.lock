@@ -1,7 +1,8 @@
 PATH
   remote: .
   specs:
-    meditation (0.1.4)
+    meditation (0.1.6)
+      bundler (~> 1.16.a)
       nokogiri (~> 1.8.1)
       require_all (~> 1.4.0)
 
@@ -23,7 +24,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.16.a)
   meditation!
   nokogiri
   pry
