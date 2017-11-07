@@ -5,7 +5,7 @@ require "meditation/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "meditation"
-  spec.version       = "0.1.8"
+  spec.version       = "0.1.9"
   spec.authors       = ["Miriam Peskowitz"]
   spec.email         = "miriam5000@gmail.com"
 
