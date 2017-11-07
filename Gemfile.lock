@@ -2,6 +2,8 @@ PATH
   remote: .
   specs:
     meditation (0.1.4)
+      nokogiri (~> 1.8.1)
+      require_all (~> 1.4.0)
 
 GEM
   remote: https://rubygems.org/
@@ -26,7 +28,6 @@ DEPENDENCIES
   nokogiri
   pry
   rake (~> 10.0)
-  require_all (~> 1.4.0)
 
 BUNDLED WITH
    1.16.0.pre.3
