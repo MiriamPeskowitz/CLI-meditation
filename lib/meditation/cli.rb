@@ -6,6 +6,7 @@ class Meditation::CLI_controller
 	 	puts "************************************************"
 
 	 	@today = Meditation::Scraper.new.scrape
+	 	binding.pry	 	
 	 	menu
 	end 
 
@@ -50,8 +51,13 @@ class Meditation::CLI_controller
 
  	def pick_meditation
  		selected_meditation = gets.strip
- 		puts "http://www.audiodharma.org/#{@today.meditations[selected_meditation.to_i-1].stream}"
- 		system("open http://www.audiodharma.org/#{@today.meditations[selected_meditation.to_i-1].stream}")
+ 		if selected_meditation.to_i.between?(1, @today.size)
+	 		puts "http://www.audiodharma.org/#{@today.meditations[selected_meditation.to_i-1].stream}"
+	 		system("open http://www.audiodharma.org/#{@today.meditations[selected_meditation.to_i-1].stream}")
+	 	else 
+	 		puts "please try again"	
+	 	end 
+
 	end 
  
 end
