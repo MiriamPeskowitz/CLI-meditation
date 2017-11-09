@@ -5,11 +5,13 @@
 
 So you want a quick meditation, but every meditation site has a gazillion choices. It takes 20 minutes just to find the one you want, and then you have to go to work! They say too many choices make us unhappy. Here's the solution: five meditations to choose from. If you start obsessing, just choose #5 and be done with it. 
 
+To run the gem from the command line:  meditation-start
+
 Happy calm!
 
 **
 
-Welcome to my CLI Data Gem project. It began as a more ambitious gem that scraped four sites and brought you four different types of info and wisdom with which to begin your day. It went wide instead of deep. I put that on hold to create this new version, which scrapes the Audio Dharma site to bring you a choice of five meditative talks.  
+Welcome to my CLI Data Gem project for the Flatiron School. It began as a more ambitious gem that scraped four sites and brought you four different types of info and wisdom with which to begin your day. It went wide instead of deep. I put that on hold to create this new version, which scrapes the Audio Dharma site to bring you a choice of five meditative talks.  
 
 github: https://github.com/MiriamPeskowitz/CLI-meditation
 
