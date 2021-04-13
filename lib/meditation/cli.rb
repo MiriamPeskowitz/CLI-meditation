@@ -2,11 +2,11 @@ class Meditation::CLI_controller
 
 	def call #initialize the CLI controller object -- wrap my brain around this. 
 	 	#scrape first 
-	 	puts "****   Welcome to Miriam's meditation gem.  ****"
+	 	puts "****   Daily Meditation  ****"
 	 	puts "************************************************"
 
 	 	@today = Meditation::Scraper.new.scrape
-	 	binding.pry	 	
+	 	# binding.pry	 	
 	 	menu
 	end 
 
