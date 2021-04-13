@@ -51,7 +51,8 @@ class Meditation::CLI_controller
 
  	def pick_meditation
  		selected_meditation = gets.strip
- 		if selected_meditation.to_i.between?(1, @today.size)
+ 		
+ 		if selected_meditation.to_i.between?(1, @today.meditations.size)
 	 		puts "http://www.audiodharma.org/#{@today.meditations[selected_meditation.to_i-1].stream}"
 	 		system("open http://www.audiodharma.org/#{@today.meditations[selected_meditation.to_i-1].stream}")
 	 	else 

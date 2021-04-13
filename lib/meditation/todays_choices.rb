@@ -1,11 +1,8 @@
-
 require 'pry'
-
 
 class Meditation::Todays_choices
 	attr_accessor :meditations #change this to attr_reader, since I set it below? 
 	
-
 	def initialize
 		@meditations = []
 	end
@@ -17,6 +14,4 @@ class Meditation::Todays_choices
 	def add_meditation(meditation)
 		@meditations << meditation
 	end 
-
-	
 end
