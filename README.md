@@ -1,7 +1,7 @@
 # Meditation/Time
 
 ## Description
-Sometimes I want to meditate or listen to an Audio Dharma talk, but then I get lost in choosing one, and then I give up. So I built Meditation/Time. It scrapes Audio Dharma, chooses the top five meditations for that day. Choose one by title, teacher or time, of just randomly type in a number from 1-5.  
+I built Meditation/Time because sometimes we want to listen to a meditation, but we don't want to spent 20 minutes picking one out. Meditation/Time scrapes Audio Dharma, and presents you with five meditations. So much easier to choose, right?  
 
 github: https://github.com/MiriamPeskowitz/CLI-meditation
 
@@ -11,9 +11,9 @@ github: https://github.com/MiriamPeskowitz/CLI-meditation
 
     $ gem install meditation
 
-    To run from the command line, type:  meditation-start
+    To run, type:  meditation-start
 
-2: Add this line to your application's Gemfile:
+2: Install in Gemfile:
 
 ```ruby
 gem 'meditation'
@@ -25,13 +25,6 @@ And then execute:
 
 ## Usage
 To use CLI-Meditation: ruby bin/meditation-start in your console, or just meditation-start
-
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
 ## Contributing
 
