@@ -5,14 +5,14 @@ require "meditation/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "meditation"
-  spec.version       = "0.1.9"
+  spec.version       = "0.2.0"
   spec.authors       = ["Miriam Peskowitz"]
   spec.email         = "miriam5000@gmail.com"
 
-  spec.summary       = "Meditations to start your day, from Audiodharma.org."
-  spec.description   = "CLI app that that scrapes five daily meditations so you can choose one."
+  spec.summary       = "Meditation chooser, from Audiodharma.org."
+  spec.description   = "CLI app that scrapes five daily meditations for you"
   spec.homepage      = "https://github.com/MiriamPeskowitz/CLI-meditation"
-  # spec.license       = ["MIT"] #choosealicense.com/.
+  spec.license       = "MIT"
 
 # is this the problem? http://guides.rubygems.org/specification-reference/#add_runtime_dependency 
 #if spec.respond_to?(:metadata)
@@ -29,7 +29,7 @@ Gem::Specification.new do |spec|
   spec.executables   = ["meditation-start"]
   spec.require_paths = ["lib"]
 
-  
+
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "pry",  "~> 0.11.2"
   spec.add_runtime_dependency "nokogiri", "~> 1.8.1"

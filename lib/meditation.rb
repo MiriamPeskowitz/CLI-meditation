@@ -9,5 +9,5 @@ require_relative "./meditation/cli"
 
 
 module Meditation
-  # Your code goes here...
+ 
 end

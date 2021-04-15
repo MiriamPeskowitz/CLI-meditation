@@ -2,9 +2,8 @@ class Meditation::CLI_controller
 
 	def call #initialize the CLI controller object -- wrap my brain around this. 
 	 	#scrape first 
-	 	puts "****   Daily Meditation  ****"
-	 	puts "************************************************"
-
+	 	puts "****   Meditation/Time  ****"
+	
 	 	@today = Meditation::Scraper.new.scrape
 	 	# binding.pry	 	
 	 	menu
@@ -20,16 +19,16 @@ class Meditation::CLI_controller
 
 			#logic for the input: 
 			if list_or_exit_input == "list"
-				puts "************************************************"
+				puts "********"
 				list_meditations 
 
-				puts "Enter the number of the meditative talk you'd like to hear. (It'll auto-open in your browser.)"
+				puts "Enter the number of the meditation you'd like to hear. (It'll auto-open in your browser.)"
 				pick_meditation
 				
 
 			elsif list_or_exit_input == "exit"
-				puts "Have a calm and grounded day."
-				puts "*****************************"
+				puts "Bye, and keep breathing."
+			
 				break
 
 			else
@@ -45,7 +44,7 @@ class Meditation::CLI_controller
 			puts "#{i + 1}: #{m.title}"
 			puts " by #{m.teacher} (Length: #{m.length})"
 		end 
-		puts "************************************************"
+		puts "*********"
 
 	end 
 

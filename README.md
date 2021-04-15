@@ -1,41 +1,30 @@
-# Meditation
-
+# Meditation/Time
 
 ## Description
-
-So you want a quick meditation, but every meditation site has a gazillion choices. It takes 20 minutes just to find the one you want, and then you have to go to work! They say too many choices make us unhappy. Here's the solution: five meditations to choose from. If you start obsessing, just choose #5 and be done with it. 
-
-To run the gem from the command line:  meditation-start
-
-Happy calm!
-
-**
-
-Welcome to my CLI Data Gem project for the Flatiron School. It began as a more ambitious gem that scraped four sites and brought you four different types of info and wisdom with which to begin your day. It went wide instead of deep. I put that on hold to create this new version, which scrapes the Audio Dharma site to bring you a choice of five meditative talks.  
+Sometimes I want to meditate or listen to an Audio Dharma talk, but then I get lost in choosing one, and then I give up. So I built Meditation/Time. It scrapes Audio Dharma, chooses the top five meditations for that day. Choose one by title, teacher or time, of just randomly type in a number from 1-5.  
 
 github: https://github.com/MiriamPeskowitz/CLI-meditation
 
-
-
-
 ## Installation
 
-Add this line to your application's Gemfile:
+1. Install from command line as:
+
+    $ gem install meditation
+
+    To run from the command line, type:  meditation-start
+
+2: Add this line to your application's Gemfile:
 
 ```ruby
 gem 'meditation'
 ```
-
 And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install meditation
 
 ## Usage
-To use CLI-Meditation: ruby bin/meditation-start in your console. 
+To use CLI-Meditation: ruby bin/meditation-start in your console, or just meditation-start
 
 
 ## Development
@@ -47,3 +36,13 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/MiriamPeskowitz/meditation.
+
+## License 
+The MIT License (MIT)
+Copyright © 2021 <Miriam Peskowitz>
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

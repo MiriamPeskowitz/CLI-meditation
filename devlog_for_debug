@@ -1,10 +1,8 @@
 Goal: get it working on my local 
-1. create new branch
-2. updated bundler 
-3. 
-
-
-
-https://stackoverflow.com/questions/43194205/gem-contains-itself-error-for-cli-data-gem
-
-End: redeploy to rubygems 
+1. create new branch DONE 
+2. updated bundler DONE
+3. Fixed code, works now in console. 
+4. Next: fix up any other things. Look up current versions of gems in gemspec 
+5. Edit the Readme. 
+5.5 Add a few tests 
+6. redeploy to rubygemsEnd: redep
